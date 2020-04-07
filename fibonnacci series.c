@@ -12,7 +12,8 @@ void main()
 	while(n<=0)
 	{
 		printf("\nenter value bigger than 0!");
-		scanf("%d\n",&n);
+		fflush(stdin);
+		scanf("%d",&n);
 	}
 	pthread_create(&th1,NULL,fibonnacci,(void*)&n);
 	pthread_join(th1,NULL);
